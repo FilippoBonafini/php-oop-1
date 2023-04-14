@@ -2,10 +2,7 @@
 
 class Movie
 {
-    public $title;
-    public $genres;
-
-    public function __construct(string $title, array $genres)
+    public function __construct(public string $title, public array $genres)
     {
         $this->title = $title;
         $this->genres = $genres;
@@ -15,5 +12,15 @@ class Movie
     {
         $info = "Title: {$this->title}, Genres: " . implode(', ', $this->genres);
         return $info;
+    }
+    public function getTitle()
+    {
+        $title = "Title: {$this->title}";
+        return $title;
+    }
+    public function getGeners()
+    {
+        $geners = "Genres: " . implode(', ', $this->genres);
+        return $geners;
     }
 }
