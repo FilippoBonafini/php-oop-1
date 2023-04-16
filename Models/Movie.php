@@ -1,5 +1,4 @@
 <?php
-
 class Movie
 {
     public function __construct(public string $title, public array $genres)
