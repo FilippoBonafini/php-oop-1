@@ -1,30 +1,18 @@
 <?php
+// definiamo una nuova classe 
 class Movie
 {
-    public function __construct(public string $title, public array $genres)
-    {
-        $this->title = $title;
-        $this->genres = $genres;
-    }
+    // dichiariamo le variabili di istanza della classe 
+    public $title;
+    public $geners;
+    public $duration;
 
-    // FUNZIONE CHE RESTITUISCE TUTTE LE INFO DEL FILM 
-    public function getInfo()
+    // creiamo una funzione costruttore che al momento dell'istanza degli oggetti
+    // appartenti a questa clsse viene 'lanciata' e chiede i paramentri 
+    function __construct(string $_title, array $_geners, int $_duration)
     {
-        $info = "Title: {$this->title}, Genres: " . implode(', ', $this->genres);
-        return $info;
-    }
-
-    // FUNZIONE CHE RESTITUISCE IL TITOLO DEL FILM 
-    public function getTitle()
-    {
-        $title = "Title: {$this->title}";
-        return $title;
-    }
-
-    // FUNZIONE CHE RESTITUISCE IL GENRE DEL FILM 
-    public function getGeners()
-    {
-        $geners = "Genres: " . implode(', ', $this->genres);
-        return $geners;
+        $this->title = $_title;
+        $this->geners = $_geners;
+        $this->duration = $_duration;
     }
 }
