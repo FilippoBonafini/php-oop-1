@@ -16,7 +16,9 @@
         <div v-for="movie in movieList">
             <h2>{{movie.title}}</h2>
             <ul>
-                <li>{{movie.geners}}</li>
+                <li>
+                    <div v-for="geners in movie.geners">{{geners}} </div>
+                </li>
                 <li>{{movie.duration}} min</li>
             </ul>
         </div>
