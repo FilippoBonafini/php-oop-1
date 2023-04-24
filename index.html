@@ -13,6 +13,15 @@
 
     <div id="app">
 
+        <div v-for="movie in movieList">
+            <h2>{{movie.title}}</h2>
+            <ul>
+                <li>{{movie.geners}}</li>
+                <li>{{movie.duration}} min</li>
+            </ul>
+        </div>
+
+
     </div>
 
 

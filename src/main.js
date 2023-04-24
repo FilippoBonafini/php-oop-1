@@ -13,7 +13,6 @@ createApp({
                     this.movieList = response.data;
                     console.log(this.movieList)
                 })
-
         }
     },
     created() {
